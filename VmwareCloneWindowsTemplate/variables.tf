@@ -59,14 +59,14 @@ variable "vm_ip" {
     type = string
 }
 
-variable "vm_subnet" {
-    description = "The subnet of the VM"
+variable "vm_netmask" {
+    description = "The netmask of the VM"
     type = string
 }
 
 variable "vm_dns" {
     description = "The DNS server of the VM"
-    type = string
+    type = list
 }
 
 variable "vm_gateway" {
