@@ -63,10 +63,11 @@ resource "vsphere_virtual_machine" "vm" {
         computer_name = var.vm_name
       }
       network_interface {
-        ipv4_address = "10.250.250.50"
+        ipv4_address = var.vm_ip
         ipv4_netmask = 24
+        dns_server_list = var.vm_dns
       }
-      ipv4_gateway = "10.250.250.1"
+      ipv4_gateway = var.vm_gateway
     }
   }
 }
