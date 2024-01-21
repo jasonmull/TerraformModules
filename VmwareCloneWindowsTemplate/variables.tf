@@ -53,3 +53,23 @@ variable "vm_name" {
     description = "The name of the VM"
     type = string
 }
+
+variable "vm_ip" {
+    description = "The IP address of the VM"
+    type = string
+}
+
+variable "vm_subnet" {
+    description = "The subnet of the VM"
+    type = string
+}
+
+variable "vm_dns" {
+    description = "The DNS server of the VM"
+    type = string
+}
+
+variable "vm_gateway" {
+    description = "The network gateway of the VM"
+    type = string
+}
