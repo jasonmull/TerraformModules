@@ -61,6 +61,7 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.vm_name
+        admin_password = data.vsphere_virtual_machine.template.admin_password
       }
       network_interface {
         ipv4_address = var.vm_ip
