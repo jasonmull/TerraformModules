@@ -73,3 +73,9 @@ variable "vm_gateway" {
     description = "The network gateway of the VM"
     type = string
 }
+
+variable "winrm_password" {
+    description = "The network the VM will be connected to"
+    type = string
+    sensitive = true
+}
