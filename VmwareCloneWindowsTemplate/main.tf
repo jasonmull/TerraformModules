@@ -61,8 +61,8 @@ resource "vsphere_virtual_machine" "vm" {
     customize {
       windows_options {
         computer_name = var.vm_name
-        admin_password = data.vsphere_virtual_machine.template.admin_password
-        time_zone = data.vsphere_virtual_machine.template.time_zone
+        admin_password = var.winrm_password
+        time_zone = "33"
       }
       network_interface {
         ipv4_address = var.vm_ip
